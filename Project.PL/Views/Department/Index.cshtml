@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Project.DAL.Models.Department>
+
+<h2>Departments</h2>
+<p>@Html.ActionLink("Create New", "Create")</p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.Name)</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

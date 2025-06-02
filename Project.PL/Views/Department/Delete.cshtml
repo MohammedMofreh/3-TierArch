@@ -1,0 +1,12 @@
+﻿@model Project.DAL.Models.Department
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>@Model.Name</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+<button type="submit" class="btn btn-danger">Delete</button>
+    @Html.ActionLink("Back to List", "Index");
+    }
+</div>
