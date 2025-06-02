@@ -4,6 +4,19 @@ This project demonstrates a clean separation of concerns using the **Three-Layer
 
 ## 📁 Structure Overview
 
+Project.PL // Presentation Layer (UI/Controllers/Views)
+└── Controllers
+└── Views
+└── ViewModels
+
+Project.BLL // Business Logic Layer (Interfaces + Services)
+└── Interfaces
+└── Repositories
+
+Project.DAL // Data Access Layer (EF Core Models & DbContext)
+└── Models
+└── Data (Configurations, Migrations, AppDbContext)
+
 
 ## 🔄 Technologies Used
 - ASP.NET Core MVC
