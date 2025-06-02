@@ -9,6 +9,7 @@ namespace Project.BLL.Interfaces
 {
     public interface IDepartmentRepository
     {
+
         IEnumerable<Department> GetAll();
         Department GetById(int id);
         int Add(Department department);

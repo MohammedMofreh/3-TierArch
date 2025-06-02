@@ -42,6 +42,10 @@ namespace Project.BLL.Repositories
                 return DbS;
             }
             return Db;
+
+            // instead of using Local, you can use AsNoTracking() to avoid tracking changes if you don't need it
+            // return _dbContext.Departments.AsNoTracking().FirstOrDefault(d => d.Id == id);
+            // return _dbContext.Departments.Find(id); // This will also work, but it will not use Local tracking
         }
 
         public int Update(Department department)
